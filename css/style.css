@@ -30,6 +30,11 @@ body {
     color: #37c659;
 }
 
+.navigation a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0);
+}
+
 #logo {
     color: #278e3f;
     text-align: center;
@@ -56,6 +61,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-left: 80px;
+    border-bottom: 1px solid #fff;
 }
 
 .about {
@@ -94,7 +100,7 @@ body {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 1em;
 }
 
@@ -168,11 +174,67 @@ footer i {
     transition: .3s;
 }
 
+small {
+    padding-left: .5em;
+}
+
+#one.active {
+    color: #37c659;
+}
+
+#two.active {
+    color: #37c659;
+}
+
+#three.active {
+    color: #37c659;
+}
+
+#four.active {
+    color: #37c659;
+}
+
 hr {
     background-color: #fff;
 }
 
+.break {
+    display: none;
+}
+
 /* MEDIA QUERY */
+
+@media (max-width: 1250px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .navigation {
+        padding-top: 1em;
+        width: 130px;
+    }
+    .navigation i {
+        font-size: 24px;
+    }
+    #logo {
+        font-size: 1.5em;
+    }
+    footer i {
+        padding: 20px;
+    }
+    .about p {
+        font-size: 16px;
+        padding: 10px;
+    }
+    .contact form {
+        width: 300px;
+    }
+    .welcome p {
+        margin: auto;
+    }
+    .break {
+        display: block;
+    }
+}
 
 @media (max-width: 600px) {
     .navigation {
@@ -180,15 +242,28 @@ hr {
         width: 100px;
     }
     .navigation i {
-        font-size: 16px;
+        font-size: 24px;
     }
     #logo {
-        font-size: 1em;
+        font-size: 1.2em;
     }
     .contact form {
-        width: 350px;
+        width: 250px;
     }
-    h1, h2, h3 {
-        font-size: 12px;
+    h1,
+    h2,
+    h3 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 14px;
+    }
+    footer i {
+        padding: 10px;
+    }
+    .about img {
+        width: 250px;
+        height: 250px;
+        background-size: cover;
     }
 }
